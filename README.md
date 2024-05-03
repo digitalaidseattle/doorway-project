@@ -1,4 +1,6 @@
-# Digital Aid Seattle Admin Template
+# The Doorway Project | Digital Aid Seattle
+
+A case managment application to serve the young people experiencing homelessness in the University District of Seattle.
 
 Built with:
 * Material UI
@@ -6,11 +8,3 @@ Built with:
 * TypeScript
 * Vite
 * Supabase
-
-Things to modify for an application:
-* .env
-* src/menu-items
-* src/toolbar-items
-* src/pages
-* src/components/Logo.tsx
-* src/themes

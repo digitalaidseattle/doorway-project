@@ -1,6 +1,6 @@
 // material-ui
-import MainCard from '../components/MainCard';
-import TicketsTable from '../sections/tickets/TicketsTable';
+import MainCard from '../../components/MainCard';
+import TicketsTable from './TicketsTable';
 
 // project import
 

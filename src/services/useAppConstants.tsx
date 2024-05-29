@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { supabaseClient } from "./supabaseClient";
+import { loggingService } from "./loggingService";
 
 
 export type AppConstant = {
@@ -20,13 +21,22 @@ const useAppConstants = (type: string) => {
                 setData(data);
                 setStatus('fetched');
             } else {
-                const response = await supabaseClient.from('app_constants')
+                supabaseClient.from('app_constants')
                     .select()
-                    .eq('type', type);
-                const data = response.data as AppConstant[];
-                cache[type] = data;
-                setData(data);
-                setStatus('fetched');
+                    .eq('type', type)
+                    .then(response => {
+                        console.log('response', response)
+                        if (response.data) {
+                            const data = response.data as AppConstant[];
+                            cache[type] = data;
+                            setData(data);
+                            setStatus('fetched');
+                        } else {
+                            loggingService.error(response.statusText)
+                            setData([]);
+                            setStatus('fetched');
+                        }
+                    })
             }
         };
 

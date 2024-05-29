@@ -10,10 +10,10 @@ import { useParams } from 'react-router';
 // material-ui
 import { Button, Grid, Stack, Typography } from '@mui/material';
 
-import { DASSnackbar } from '../components/DASSnackbar';
-import { UserContext } from '../components/contexts/UserContext';
-import { TicketHistoryCard, TicketLongForm } from '../sections/tickets/TicketComponents';
-import { Ticket, Staff, ticketService } from '../sections/tickets/ticketService';
+import { DASSnackbar } from '../../components/DASSnackbar';
+import { UserContext } from '../../components/contexts/UserContext';
+import { TicketHistoryCard, TicketLongForm } from './TicketComponents';
+import { Ticket, Staff, ticketService } from './ticketService';
 
 const Labels = {
   updateMessage: 'Ticket updated.',

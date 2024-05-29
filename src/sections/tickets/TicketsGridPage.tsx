@@ -2,8 +2,8 @@
  * TicketsGridPage.tsx
  */
 // material-ui
-import MainCard from '../components/MainCard';
-import TicketsGrid from '../sections/tickets/TicketsGrid';
+import MainCard from '../../components/MainCard';
+import TicketsGrid from './TicketsGrid';
 
 // project import
 

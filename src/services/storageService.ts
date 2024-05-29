@@ -33,7 +33,7 @@ downloadFile = async (filepath: string): Promise<Blob | null> => {
             })
     }
 
-    listFiles = async (): Promise<File[]> => {
+    listFiles = async (): Promise<any[]> => {
         return supabaseClient
             .storage
             .from(BUCKET_NAME)
